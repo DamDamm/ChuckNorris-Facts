@@ -11,4 +11,6 @@ async function getData() {
     }
   }
 
-  getData();
+  const refresh = document.getElementById('refresh');
+  console.log(refresh);
+  refresh.addEventListener('click', getData);
