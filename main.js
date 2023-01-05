@@ -33,7 +33,7 @@ async function getJoke() {
 getJoke()
 
 const categories = document.querySelector('select');
-categories.addEventListener('click', getJoke);
+categories.addEventListener('change', getJoke);
 
 
 
