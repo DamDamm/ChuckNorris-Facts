@@ -1,59 +1,76 @@
+body{
+    background-color: rgb(48, 48, 48);
+}
+
+h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 100px;
+    text-shadow: white;
+    text-align: center;
+    letter-spacing: 8px;
+    color: #000000;
+    text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8;
+}
+
 img{
     width: 200px;
     display: block;
     margin: auto;
 }
 
-
-select{
-    margin: auto;
-    margin-top: 20px;
+section{
     display: flex;
-    width: 200px;
-    font-size: 20px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #a52a2a;
-    color: white;
-    border-radius: 10%;
 }
 
-option{
-    text-align: center;
-}
-
-#RandomJokes{
+article{
+    width: 50%;
+    margin: 20px;
     background-color: grey;
-    padding: 20px;
-    margin-top: 20px;
+    border: black solid 5px;
+}
+
+h2{
+    text-align: center;
+    font-size: 50px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 5px;
+}
+
+hr{
+    border: black solid 1px;
+    width: 65%;
+    margin-bottom: 20px;
 }
 
 p{
-    margin: auto;
-    margin-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 30px;
-    width: 80%;
+    color: white;
+    text-align: center;
+    color: rgb(48, 48, 48);
+}
+
+select{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: gainsboro;
-    border: black 2px solid;
+    margin: auto;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+    background-color: #616161;
+    color: white;
+    border: black solid 2px;
+    border-radius: 5px;
+    text-transform: capitalize;
+
 }
 
 button{
-    margin: auto;
     display: flex;
-    width: 200px;
+    margin: auto;
     font-size: 20px;
-    justify-content: center;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #a52a2a;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+    background-color: #616161;
     color: white;
-    border-radius: 10%;
-}
-
-button:hover{
-    background-color: #751a1a;
-    font-size: 25px;
-    border: black 3px solid;
+    border-radius: 5px;
 }
