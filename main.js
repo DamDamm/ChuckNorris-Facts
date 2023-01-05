@@ -19,8 +19,9 @@ getCategories();
 // Ajout de la fonctionnalité qui permet d'afficher une blague random de l'API par rapport avec la categories selectionnés
 async function getJoke() {
   try {
-    const select = document.querySelector('option');
+    const select = document.querySelector('select');
     const category = select.value;
+    console.log(category);
     const response = await fetch(`https://api.chucknorris.io/jokes/random?category=${category}`);
     const data = await response.json();
     const jokePara = document.getElementById('categoriesResult');
@@ -31,9 +32,10 @@ async function getJoke() {
 }
 getJoke()
 
-
-const categories = document.getElementById('categories');
+const categories = document.querySelector('select');
 categories.addEventListener('click', getJoke);
+
+
 
 
 // Ajout de la fonctionnalité qui permet d'afficher une blague random de l'API
