@@ -1,3 +1,21 @@
+const form = document.getElementById('form');
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // empêche le rechargement de la page lors de la soumission du formulaire
+  getDataFromAPI(); // appelle la fonction pour récupérer les données de l'API
+});
+
+async function getDataFromAPI() {
+  const input = document.getElementById('joke').value; // récupère la valeur du champ de formulaire
+  const response = await fetch(`https://api.chucknorris.io/jokes/search?query=${input}`); // envoie la requête à l'API
+  const data = await response.json(); // récupère les données au format JSON
+  // affiche les données dans le paragraphe
+  const values = data.result.map(item => item.value);
+  for (let i = 0; i < values.length; i++){
+  formResult.innerHTML = values;
+  }
+}
+
+
 // Ajout de la fonctionnalité qui permet d'afficher les categories dans la balise Select / Option
 async function getCategories() {
   try {
@@ -21,7 +39,6 @@ async function getJoke() {
   try {
     const select = document.querySelector('select');
     const category = select.value;
-    console.log(category);
     const response = await fetch(`https://api.chucknorris.io/jokes/random?category=${category}`);
     const data = await response.json();
     const jokePara = document.getElementById('categoriesResult');
@@ -31,6 +48,8 @@ async function getJoke() {
   }
 }
 getJoke()
+
+//On pourrait rajouter un if/else pour afficher undefined au chargement de la page
 
 const categories = document.querySelector('select');
 categories.addEventListener('change', getJoke);
