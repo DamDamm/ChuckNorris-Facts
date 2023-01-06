@@ -3,17 +3,17 @@ form.addEventListener('submit', function(event) {
   event.preventDefault(); // empêche le rechargement de la page lors de la soumission du formulaire
   getDataFromAPI(); // appelle la fonction pour récupérer les données de l'API
 });
+const button = document.getElementById('envoyer');
+button.addEventListener('click', getDataFromAPI);
 
 async function getDataFromAPI() {
-  const input = document.getElementById('joke').value; // récupère la valeur du champ de formulaire
+  const input = document.getElementById('joke').value; // on récupère la valeur du champ de formulaire
   const response = await fetch(`https://api.chucknorris.io/jokes/search?query=${input}`); // envoie la requête à l'API
-  const data = await response.json(); // récupère les données au format JSON
+  const data = await response.json(); // on récupère les données au format JSON
   // affiche les données dans le paragraphe
-  const values = data.result.map(item => item.value);
-  for (let i = 0; i < values.length; i++){
-  formResult.innerHTML = values;
-  }
-}
+  const items = data.result.map(item => `<li>${item.value}</li>`); // On map sur l'élément result de l'API afin de trouver le "value" qui correspond aux blagues. Ensuite on les mets sous forme de listes.
+  formResult.innerHTML = items.join(''); // On vient introduire les listes créees auparavant dans le paragraphe( ID = formResult )
+  };
 
 
 // Ajout de la fonctionnalité qui permet d'afficher les categories dans la balise Select / Option
@@ -35,8 +35,9 @@ getCategories();
 
 
 // Ajout de la fonctionnalité qui permet d'afficher une blague random de l'API par rapport avec la categories selectionnés
-async function getJoke() {
+async function getJoke(event) {
   try {
+    event.preventDefault();
     const select = document.querySelector('select');
     const category = select.value;
     const response = await fetch(`https://api.chucknorris.io/jokes/random?category=${category}`);

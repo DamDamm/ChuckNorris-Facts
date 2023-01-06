@@ -8,38 +8,35 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <h1> CHUCK NORRIS FACTS </h1>
-    </header>
+        <header>
+            <h1> CHUCK NORRIS FACTS </h1>
+        </header>
 
-<section>
+        <section>
 
-        <article>
+            <article>
+                <h2>Choisis une Catégorie</h2>
+                <select id="categories"></select>
+                <p id="categoriesResult"></p>
+            </article>
+
+            <article id="RandomJokes">
+                <h2>Generateur de Blague</h2>
+                <button id="refresh"> Donne moi une blague </button>
+                <p id="randomResult"> </p>
+            </article>
+
+        </section>
+
+        <nav>
             <h2>Cherche une blague</h2>
-            <hr>
             <form id="form">
                 <input type="text" name="joke" id="joke" placeholder="Entrez votre blague">
-                <input type="button" value="submit">
+                <button id="envoyer">Envoyer</button>
             </form>
-            <p id="formResult"> </p>
-        </article>
+            <p id="formResult"></p>
+        </nav>
 
-        <article>
-            <h2>Choisis une Catégorie</h2>
-            <hr>
-            <select id="categories"></select>
-            <p id="categoriesResult"></p>
-        </article>
-
-        <article id="RandomJokes">
-            <h2>Generateur de Blague</h2>
-            <hr>
-            <button id="refresh"> Donne moi une blague </button>
-            <p id="randomResult"> </p>
-        </article>
-
-</section>
-
-    <script src="main.js"></script>
+        <script src="main.js"></script>
 </body>
 </html>
