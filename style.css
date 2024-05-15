@@ -1,115 +1,173 @@
 body{
-    background-color: rgb(48, 48, 48);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-/* TITRE DE LA PAGE */
-h1{
-    font-size: 100px;
-    text-shadow: white;
+ /* HEADER */
+header{
+    background-color: #f1c695;
     text-align: center;
-    letter-spacing: 8px;
-    color: #000000;
-    text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8;
-}
-
-/* CHERCHE UNE BLAGUE */
-nav{
-    margin: 20px;
-    background-color: grey;
-    border: black solid 5px;
-}
-
-input{
-    display: flex;
-    margin: auto;
-    font-size: 20px;
     padding: 10px;
-    background-color: #616161;
-    color: white;
-    border-radius: 5px;
 }
 
-#joke{
-    margin-bottom: 20px;
-    width: 300px;
-    background-color: white;
-    color: black;
-    border-radius: 10px;
+header img{
+    width: 100px;
+    height: 100px;
 }
 
-#formResult{
-    text-align: justify;
-}
-
-li{
-    margin: 20px;
-    padding: 10px;
-    list-style: none;
-    border: black 2px solid;
+h1{
+    font-size: 40px;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 2px #000;
 }
 
 /* SECTION */
-section{
-    display: flex;
-}
-
-article{
-    width: 50%;
+#container{
     margin: 20px;
-    background-color: grey;
-    border: black solid 5px;
-}
-
-/* CHOISIS UNE CATEGORIE */
-select{
     display: flex;
-    margin: auto;
-    font-size: 20px;
-    padding: 10px;
-    background-color: #616161;
-    color: white;
-    border: black solid 2px;
-    border-radius: 5px;
-    text-transform: capitalize;
-
 }
 
+#section1{
+    width: 40%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
 
-/* ANNEXE */
-h2{
-    background-color: #616161;
-    width: 12em;
-    padding: 5px;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+#Category{
+    margin: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    text-align: center;
-    font-size: 50px;
-    letter-spacing: 5px;
-    border: #000000 2px solid;
-    border-radius: 10px;
+    border-left: 10px solid #f1c695;
+    box-shadow: 5px 3px 14px 5px #000000;
 }
 
-p{
-    padding: 10px;
+#Category h2{
+    text-align: center;
     font-size: 30px;
-    color: white;
-    text-align: center;
-    color: rgb(48, 48, 48);
+    margin: 10px;
 }
 
-button{
-    display: flex;
-    margin: auto;
+#Category #categories{
+    background-color: #f1c695;
+    margin-top: 10px;
     font-size: 20px;
-    padding: 10px;
-    background-color: #616161;
-    color: white;
-    border-radius: 5px;
+    width: auto;
 }
 
-button:hover{
-    font-size: 25px;
-    font-weight: bold;
+#Category #categoriesResult{
+    background-color: #f0f0f0;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: justify; 
+    
+}
+
+#section1 #RandomJokes{
+    margin: 10px;
+    margin-top: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 10px solid #f1c695;
+    box-shadow: -5px 3px 14px 5px #000000;
+}
+
+#RandomJokes h2{
+    text-align: center;
+    font-size: 30px;
+    margin: 10px;
+}
+
+#RandomJokes #refresh{
+    background-color: #f1c695;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+#RandomJokes #refresh:hover{
+    border: 2px solid black;
+}
+
+
+#RandomJokes #randomResult{
+    background-color: #f0f0f0;
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 20px;
+    text-align: justify; 
+
+}
+
+
+#section2{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+#section2 #Search{
+    width: 60%;
+    margin: 10px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 10px solid #f1c695;
+    box-shadow: 10px 3px 15px 3px #000000;
+}
+
+#Search h2{
+    text-align: center;
+    font-size: 30px;
+    margin: 10px;
+}
+
+#Search #form{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Search #form input{
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    width: 300px;
+}
+
+#Search #form button{
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    width: 300px;
+    background-color: #f1c695;
+    border: 2px solid black;
+}
+
+#Search #form button:hover{
+    border: 3px solid black;
+}
+
+#Search #formResult{
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 20px;
+    text-align: justify;
+    list-style-type: none;
+}
+
+#Search #formResult li{
+    background-color: #f0f0f0;
+    box-shadow: inset -2px -2px #000;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    text-align: center;
 }

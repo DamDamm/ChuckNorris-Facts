@@ -9,33 +9,37 @@
 </head>
 <body>
         <header>
+            <img src="img/logoNorris.png" alt="ChuckNorris" id="Logo">
             <h1> CHUCK NORRIS FACTS </h1>
         </header>
 
-        <section>
-
-            <article>
-                <h2>Choisis une Catégorie</h2>
+    <div id="container">
+        <section id="section1">
+            <article id="Category">
+                <h2>Choose a Category</h2>
                 <select id="categories"></select>
                 <p id="categoriesResult"></p>
             </article>
 
             <article id="RandomJokes">
-                <h2>Generateur de Blague</h2>
-                <button id="refresh"> Donne moi une blague </button>
+                <h2>Jokes Generator</h2>
+                <button id="refresh"> Get a random jokes </button>
                 <p id="randomResult"> </p>
             </article>
-
         </section>
 
-        <nav>
-            <h2>Cherche une blague</h2>
-            <form id="form">
-                <input type="text" name="joke" id="joke" placeholder="Entrez votre blague">
-                <button id="envoyer">Envoyer</button>
-            </form>
-            <p id="formResult"></p>
-        </nav>
+        <section id="section2">
+            <article id="Search">
+                <h2>Search a Jokes</h2>
+                <form id="form">
+                    <input type="text" name="joke" id="joke" placeholder="Search a jokes">
+                    <button id="envoyer">Search</button>
+                </form>
+                <p id="formResult"></p>
+            </article>
+        </section>
+    </div>
+
 
         <script src="main.js"></script>
 </body>
